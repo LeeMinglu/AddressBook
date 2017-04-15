@@ -56,7 +56,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="nTD-Bp-l3b" kind="show" id="77d-fb-7pM"/>
+                        <segue destination="nTD-Bp-l3b" kind="show" identifier="contact" id="77d-fb-7pM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4W-Sl-aRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,9 +149,18 @@
                         <barButtonItem title="Item" id="C8Q-9c-Wly"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="联系人" id="8oC-qT-rlR">
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="JFW-78-v5T"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="JFW-78-v5T">
+                            <connections>
+                                <action selector="saveBtn:" destination="nTD-Bp-l3b" id="czF-6d-bnG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addressText" destination="0LW-5M-zuQ" id="izu-7s-pio"/>
+                        <outlet property="nameText" destination="vsG-rA-gMc" id="4fm-ct-TJm"/>
+                        <outlet property="phoneText" destination="TdJ-RQ-Iwg" id="GRb-0b-5cj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afx-m4-KKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,6 +184,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zzj-GA-PaB"/>
+        <segue reference="77d-fb-7pM"/>
     </inferredMetricsTieBreakers>
 </document>

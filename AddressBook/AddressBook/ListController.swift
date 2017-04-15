@@ -69,5 +69,17 @@ class ListController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ContactController
+        if let indexPath = sender as? IndexPath {
+            vc.person = PersonList[indexPath.row]
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "contact", sender: indexPath)
+    }
+    
 
 }
