@@ -58,15 +58,16 @@ class ListController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
        let cell = tableView.dequeueReusableCell(withIdentifier: "list", for: indexPath)
-//        if cell == nil {
-//            cell = UITableViewCell.init(style: .default, reuseIdentifier: "list")
-//        }
+
         let person = self.PersonList[indexPath.row]
         
         cell.textLabel?.text = person.name
         cell.detailTextLabel?.text = person.phone
         
         return cell
+    }
+    @IBAction func newPerson(_ sender: Any) {
+        performSegue(withIdentifier: "contact", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,12 +76,20 @@ class ListController: UITableViewController {
             vc.person = PersonList[indexPath.row]
             vc.completionCallback = {
                 self.tableView.reloadRows(at: [indexPath], with: .automatic)
-                
             }
 
+        }else {
+            vc.completionCallback = {
+                guard let p = vc.person else {
+                    return
+                }
+                self.PersonList.insert(p, at: 0)
+                
+                self.tableView.reloadData()
+            }
         }
         
-            }
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

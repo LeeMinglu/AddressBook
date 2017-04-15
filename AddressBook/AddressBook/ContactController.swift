@@ -19,20 +19,20 @@ class ContactController: UITableViewController {
     var person: Person?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if person != nil {
-            nameText.text = person?.name
-            phoneText.text = person?.phone
-            addressText.text = person?.address
+            if person != nil {
+                nameText.text = person?.name
+                phoneText.text = person?.phone
+                addressText.text = person?.address
         }
         
     }
 
     @IBAction func saveBtn(_ sender: Any) {
-        nameText.text = nameText.text
-        phoneText.text = phoneText.text
-        addressText.text = addressText.text
         
+        if person == nil {
+            person = Person()
+
+        }
         self.person?.name = nameText.text
         self.person?.phone = phoneText.text
         self.person?.address = addressText.text
