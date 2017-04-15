@@ -14,6 +14,8 @@ class ContactController: UITableViewController {
     @IBOutlet weak var phoneText: UITextField!
     @IBOutlet weak var addressText: UITextField!
     
+    var completionCallback:(()->())?
+    
     var person: Person?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,20 @@ class ContactController: UITableViewController {
     }
 
     @IBAction func saveBtn(_ sender: Any) {
+        nameText.text = nameText.text
+        phoneText.text = phoneText.text
+        addressText.text = addressText.text
+        
+        self.person?.name = nameText.text
+        self.person?.phone = phoneText.text
+        self.person?.address = addressText.text
+        
+        //返回上一级界面
+        navigationController?.popViewController(animated: true)
+        
+        //刷新数据
+        completionCallback?()
+        
         
     }
     

@@ -73,8 +73,14 @@ class ListController: UITableViewController {
         let vc = segue.destination as! ContactController
         if let indexPath = sender as? IndexPath {
             vc.person = PersonList[indexPath.row]
+            vc.completionCallback = {
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+                
+            }
+
         }
-    }
+        
+            }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
