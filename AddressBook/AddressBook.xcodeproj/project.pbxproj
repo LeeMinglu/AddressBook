@@ -13,6 +13,7 @@
 		1A0A821F1E937E4A001DE29E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0A821D1E937E4A001DE29E /* LaunchScreen.storyboard */; };
 		1A0A82271E9388C4001DE29E /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A82261E9388C4001DE29E /* ListController.swift */; };
 		1A0A82291E9388E7001DE29E /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A82281E9388E7001DE29E /* ContactController.swift */; };
+		1A0A822B1E939A2E001DE29E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A822A1E939A2E001DE29E /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1A0A82201E937E4A001DE29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A0A82261E9388C4001DE29E /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		1A0A82281E9388E7001DE29E /* ContactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		1A0A822A1E939A2E001DE29E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1A0A821B1E937E4A001DE29E /* Assets.xcassets */,
 				1A0A821D1E937E4A001DE29E /* LaunchScreen.storyboard */,
 				1A0A82201E937E4A001DE29E /* Info.plist */,
+				1A0A822A1E939A2E001DE29E /* Person.swift */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				1A0A82151E937E4A001DE29E /* AppDelegate.swift in Sources */,
 				1A0A82271E9388C4001DE29E /* ListController.swift in Sources */,
+				1A0A822B1E939A2E001DE29E /* Person.swift in Sources */,
 				1A0A82291E9388E7001DE29E /* ContactController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
